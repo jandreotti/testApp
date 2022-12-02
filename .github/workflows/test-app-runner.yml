@@ -25,5 +25,5 @@ jobs:
         run: npm run build
 
       - name: Iniciando... 
-        run: pm2 delete all 
-        run: pm2 start npm --name "test-app" -- run start
+        run: pm2 delete all
+      - run: pm2 start npm --name "test-app" -- run start
