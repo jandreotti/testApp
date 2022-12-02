@@ -16,7 +16,7 @@ jobs:
           node-version: 18
 
       - name: Install PM2
-        run: npm i pm2
+        run: npm install pm2 -g
 
       - name: Instalando paquetes del repo
         run: npm install
