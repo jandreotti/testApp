@@ -19,11 +19,11 @@ jobs:
         run: npm i pm2
 
       - name: Instalando paquetes del repo
-      - run: npm install
+        run: npm install
 
       - name: Building...
-      - run: npm run build
+        run: npm run build
 
       - name: Iniciando... 
-      - run: pm2 delete all 
-      - run: pm2 start npm --name "test-app" -- run start
+        run: pm2 delete all 
+        run: pm2 start npm --name "test-app" -- run start
