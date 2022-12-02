@@ -2,15 +2,14 @@ name: test-app-runner
 
 on:
   push:
-    branches: [ main ]
-
+    branches: [main]
 
 jobs:
   build:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
-      
+
       - uses: actions/setup-node@v1
         with:
           node-version: 18
@@ -24,6 +23,6 @@ jobs:
       - name: Building...
         run: npm run build
 
-      - name: Iniciando... 
-        run: pm2 delete all
+      - name: Iniciando...
+        # run: pm2 delete all
       - run: pm2 start npm --name "test-app" -- run start
