@@ -10,19 +10,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 18
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 18
 
-      - name: Install PM2
-        run: npm install pm2 -g
+      # - name: Install PM2
+      #   run: npm install pm2 -g
 
-      - name: Instalando paquetes del repo
-        run: npm install
+      # - name: Instalando paquetes del repo
+      #   run: npm install
 
-      - name: Building...
-        run: npm run build
+      # - name: Building...
+      #   run: npm run build
 
-      - name: Iniciando...
-        # run: pm2 delete all
-        run: pm2 start npm --name "test-app" -- run start
+      # - name: Iniciando...
+      #   # run: pm2 delete all
+      #   run: pm2 start npm --name "test-app" -- run start
